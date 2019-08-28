@@ -1,11 +1,9 @@
-<template>
-  <div id="app">
-    <router-link to="/">Home</router-link>
-    <router-link to="/search_ip">Search IP</router-link>
+<template lang="pug">
+  #app
+    router-link(to="/") Home
+    router-link(to="/foo") Test
 
-    <router-view />
-
-  </div>
+    router-view
 </template>
 
 

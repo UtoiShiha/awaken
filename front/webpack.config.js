@@ -48,7 +48,7 @@ module.exports = {
         }
     },
     devServer:{
-        contentBase: '../',
+        contentBase: '../../',
         port:3000,
         host:'localhost',
         historyApiFallback:true
