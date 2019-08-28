@@ -1,0 +1,13 @@
+{
+    "require": {
+        "slim/slim": "^3.12"
+    },
+    "require-dev": {
+        "kahlan/kahlan": "^4.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Controllers\\" : "src/controllers/"
+        }
+    }
+}

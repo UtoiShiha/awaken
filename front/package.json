@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha-webpack --webpack-config webpack.config.js  test/**/*.js"
   },
   "author": "UtoiShiha",
   "license": "ISC",
@@ -31,5 +31,10 @@
     "webpack": "^4.39.3",
     "webpack-cli": "^3.3.7",
     "webpack-dev-server": "^3.8.0"
+  },
+  "devDependencies": {
+    "@vue/test-utils": "^1.0.0-beta.29",
+    "mocha": "^6.2.0",
+    "mocha-webpack": "^2.0.0-beta.0"
   }
 }

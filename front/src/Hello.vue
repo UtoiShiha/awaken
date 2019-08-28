@@ -4,6 +4,11 @@
 </template>
 <script>
 export default {
-    name:'Hello'
+    name:'Hello',
+    data() {
+        return {
+            text:'hello'
+        }
+    },
 }
 </script>
