@@ -4,8 +4,8 @@ use \Psr\Http\Message\ResponseInterface as Response;
 
 require 'vendor/autoload.php';
 
+use App\models\Comic;
 use App\util\DB;
-
 $app = new \Slim\App;
 $app->get('/hello/{name}', function (Request $request, Response $response, array $args) {
     $name = $args['name'];
@@ -14,8 +14,9 @@ $app->get('/hello/{name}', function (Request $request, Response $response, array
     return $response;
 });
 $app->get('/',function (Request $request, Response $response, array $args) {
-    new DB();
 
-    return $response;
+    $comic = new Comic(DB::getInstance());
+    $jsonOption = JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE;
+    return $response->withJson($comic->getInfo(),200,$jsonOption);
 });
 $app->run();

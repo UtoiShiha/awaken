@@ -14,10 +14,6 @@ class DB {
         }
     }
 
-    private function __destruct() {
-        $this->pdo = NULL;
-    }
-
     // Data source name
     private function getDsn($filename) {
         return 'sqlite:' . __DIR__ . DIRECTORY_SEPARATOR . '/../../database/'.$filename;
