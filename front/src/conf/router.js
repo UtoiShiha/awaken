@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import Hello from '@/src/Hello.vue'
 Vue.use(Router)
 // 1. ルートコンポーネントを定義します
 // 他のファイルからインポートすることもできます
@@ -15,6 +16,7 @@ export default new Router({
     {
       path: '/',
       name: 'home',
+      component:Hello
     },
     { path: '/foo', component: Foo },
     { path: '/bar', component: Bar }
