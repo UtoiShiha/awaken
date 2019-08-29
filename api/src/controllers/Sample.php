@@ -1,7 +1,7 @@
 <?php
-    namespace Controllers;
+    namespace App\controllers;
 
-
+use App\util\DB;
 class Sample
 {
     /**
@@ -12,6 +12,12 @@ class Sample
      */
     public function hoge()
     {
+        $db = DB::getInstance();
+        
+    // 選択 (プリペアドステートメント)
+    $stmt = $db->get()->query("Select * from comic_info");
+    $r1 = $stmt->fetchAll();
+    var_dump($r1);
         return true;
     }
 }

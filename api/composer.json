@@ -2,14 +2,21 @@
     "name":"awaken",
     "description": "voiler template",
     "require": {
-        "slim/slim": "^3.12"
+        "slim/slim": "^3.12",
+        "ext-pdo_sqlite": "^7.3",
+        "slim/pdo": "^1.10"
     },
     "require-dev": {
         "kahlan/kahlan": "^4.6"
     },
     "autoload": {
         "psr-4": {
-            "Controllers\\" : "src/controllers/"
+            "App\\" : "src/"
         }
+    },
+    "scripts": {
+        "test":[
+            "kahlan --spec=test"
+        ]
     }
 }

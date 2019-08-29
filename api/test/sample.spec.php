@@ -1,6 +1,5 @@
 <?php
-
-use Controllers\Sample;
+use App\controllers\Sample;
 
 describe('SampleTest', function () {
     beforeAll(function () {
