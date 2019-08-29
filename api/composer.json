@@ -1,4 +1,6 @@
 {
+    "name":"awaken",
+    "description": "voiler template",
     "require": {
         "slim/slim": "^3.12"
     },

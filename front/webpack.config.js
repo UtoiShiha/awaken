@@ -2,10 +2,6 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 const path = require('path');
 const environment = process.env.NODE_ENV;
-console.log(process.env.NODE_ENV );
-console.log(environment);
-console.log(path.resolve(__dirname, `./src/conf/${environment}.js`));
-console.log(path.resolve(__dirname,'./'));
 module.exports = {
     entry: './index.js',
     output: {
@@ -59,6 +55,4 @@ module.exports = {
         host:'localhost',
         historyApiFallback:true
     }
-
-
 }
