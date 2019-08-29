@@ -1,7 +1,11 @@
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 const path = require('path');
-
+const environment = process.env.NODE_ENV;
+console.log(process.env.NODE_ENV );
+console.log(environment);
+console.log(path.resolve(__dirname, `./src/conf/${environment}.js`));
+console.log(path.resolve(__dirname,'./'));
 module.exports = {
     entry: './index.js',
     output: {
@@ -44,7 +48,9 @@ module.exports = {
         extensions:['.ts','.js'],
         alias:{
             'vue$': 'vue/dist/vue.esm.js',
-            '@':path.resolve(__dirname,'./')
+            '@':path.resolve(__dirname,'./'),
+            userEnv: path.resolve(__dirname, `./src/conf/${environment}.js`),
+
         }
     },
     devServer:{

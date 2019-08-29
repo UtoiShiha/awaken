@@ -1,14 +1,12 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-
 Vue.use(Router)
-
 // 1. ルートコンポーネントを定義します
 // 他のファイルからインポートすることもできます
 const Foo = { template: '<div>foo</div>' }
 const Bar = { template: '<div>bar</div>' }
 
-const baseUrl = './awaken/'
+const baseUrl = '/awaken/'
 
 export default new Router({
   mode: 'history',  
