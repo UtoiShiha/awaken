@@ -8,6 +8,12 @@
     "module": "es2015",
     "moduleResolution": "node",
     
+    "allowJs": true,
+    "declaration": false,
     "experimentalDecorators": true,
-  }
+
+  },
+  "include": [
+    "src/**/*"
+  ],
 }
